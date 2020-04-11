@@ -1,0 +1,67 @@
+.lineItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+    width: 80%;
+    
+}
+
+.lineItem > mat-card-subtitle, .lineItem > mat-card-content{
+    margin-bottom: 0px;
+}
+
+.budgetCategory {
+    margin: 1em auto;
+}
+
+.budgetCategory > div > mat-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.budgetCategory > div > mat-card > mat-card-content {
+    font-size: large;
+    font-weight: bold;
+}
+
+.green > mat-card {
+    background-color: rgb(86, 214, 86);
+}
+
+.green > .lineItem {
+    background-color: rgb(143, 245, 143);
+    border-style: solid;
+    border-color: rgb(86, 214, 86);
+}
+
+.red > mat-card { 
+    background-color: rgb(233, 58, 58);
+}
+
+.red > .lineItem {
+    background-color: rgb(255, 132, 132);
+    border-style: solid;
+    border-color: rgb(233, 58, 58);
+}
+
+.blue > mat-card {
+    background-color: rgb(45, 74, 238);
+}
+
+.blue > .lineItem {
+    background-color: rgb(56, 125, 255);
+    border-color: solid;
+    border-color: rgb(45, 74, 238);
+}
+
+.yellow > mat-card {
+    background-color: rgb(255, 255, 89);
+}
+
+.yellow > .lineItem {
+    background-color: rgb(255, 255, 144);;
+}
