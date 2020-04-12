@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCardModule, MatButtonToggleModule } from '@angular/material';
 import { BudgetPageComponent } from './budget-page/budget-page.component';
 import { SumDetailToggleComponent } from './sum-detail-toggle/sum-detail-toggle.component';
+import { WeekMonthToggleComponent } from './week-month-toggle/week-month-toggle.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { SumDetailToggleComponent } from './sum-detail-toggle/sum-detail-toggle.
     AppComponent,
     BudgetCategoryComponent,
     BudgetPageComponent,
-    SumDetailToggleComponent
+    SumDetailToggleComponent,
+    WeekMonthToggleComponent
   ],
   imports: [
     BrowserModule,
