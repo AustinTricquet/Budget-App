@@ -30,3 +30,21 @@ $Budget-App-theme: mat-light-theme($Budget-App-primary, $Budget-App-accent, $Bud
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body {
+    background: linear-gradient(to bottom,rgba(253, 181, 139, 0.85),rgb(250, 126, 124, 0.85),rgb(109, 95, 128, 0.85),rgb(46, 90, 129, 0.85));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+//orange:
+//linear-gradient(to bottom right,rgb(253, 194, 160),rgb(253, 180, 139));
+
+//peach:
+//linear-gradient(to bottom right,rgb(250, 126, 124),rgb(250, 126, 124));
+
+//purple:
+//linear-gradient(to bottom right,rgb(109, 95, 128),rgb(109, 95, 128));
+
+//navy:
+//linear-gradient(to bottom right,rgb(46, 90, 129),rgb(46, 90, 129));
