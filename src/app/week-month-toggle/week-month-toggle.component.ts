@@ -12,7 +12,7 @@ export class WeekMonthToggleComponent implements OnInit {
   ngOnInit() {
   }
 
-  selectedValue2: String = "week";
+  selectedValue2: String = "Weekly";
 
   @Output() selectedValueEvent2 = new EventEmitter<string>();
   

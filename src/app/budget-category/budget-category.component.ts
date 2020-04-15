@@ -17,28 +17,28 @@ export class BudgetCategoryComponent implements OnInit {
   
 
   sum(category) {
-    if (category.costBasis == "week") {
+    if (category.costBasis == "Weekly") {
       let sum = 0;
       (category.lineItems).forEach(item => {
-        sum += item.amount[0].week
+        sum += item.amount[0].Weekly
       });
       return sum
     }
-    if (category.costBasis == "month") {
+    if (category.costBasis == "Monthly") {
       let sum = 0;
       (category.lineItems).forEach(item => {
-        sum += item.amount[0].month
+        sum += item.amount[0].Monthly
       });
       return sum
     }
   }
 
   getAmount(category, lineItem) {
-    if (category.costBasis == "week") {
-      return lineItem.amount[0].week
+    if (category.costBasis == "Weekly") {
+      return lineItem.amount[0].Weekly
     }
-    if (category.costBasis == "month") {
-      return lineItem.amount[0].month
+    if (category.costBasis == "Monthly") {
+      return lineItem.amount[0].Monthly
     }
     
   }

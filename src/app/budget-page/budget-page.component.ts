@@ -12,14 +12,14 @@ export class BudgetPageComponent implements OnInit {
       category: 'Income',
       color: 'green',
       open: false,
-      costBasis: 'week',
+      costBasis: 'Weekly',
       lineItems: [
         {
           name: "Austin's Income",
           amount: [
             {
-              week: 926,
-              month: 4013,
+              Weekly: 926,
+              Monthly: 4013,
             }
           ]
         },
@@ -27,8 +27,8 @@ export class BudgetPageComponent implements OnInit {
           name: "Courtney's Income",
           amount: [
             {
-              week: 606,
-              month: 2626,
+              Weekly: 606,
+              Monthly: 2626,
             }
           ]
         },
@@ -38,14 +38,14 @@ export class BudgetPageComponent implements OnInit {
       category: 'Expenses',
       color: 'red',
       open: false,
-      costBasis: 'week',
+      costBasis: 'Weekly',
       lineItems: [
         {
           name: "Church Tithes",
           amount: [
             {
-              week: 202,
-              month: 875,
+              Weekly: 202,
+              Monthly: 875,
             }
           ]
         },
@@ -53,8 +53,8 @@ export class BudgetPageComponent implements OnInit {
           name: "Rent",
           amount: [
             {
-              week: 248,
-              month: 1074,
+              Weekly: 248,
+              Monthly: 1074,
             }
           ]
         },
@@ -62,8 +62,8 @@ export class BudgetPageComponent implements OnInit {
           name: "Electric Bill",
           amount: [
             {
-              week: 12,
-              month: 50,
+              Weekly: 12,
+              Monthly: 50,
             }
           ]
         },
@@ -71,8 +71,8 @@ export class BudgetPageComponent implements OnInit {
           name: "Student Debt",
           amount: [
             {
-              week: 211,
-              month: 915,
+              Weekly: 211,
+              Monthly: 915,
             }
           ]
         },
@@ -80,8 +80,8 @@ export class BudgetPageComponent implements OnInit {
           name: "Car Loan",
           amount: [
             {
-              week: 58,
-              month: 251,
+              Weekly: 58,
+              Monthly: 251,
             }
           ]
         },
@@ -89,8 +89,8 @@ export class BudgetPageComponent implements OnInit {
           name: "Internet",
           amount: [
             {
-              week: 10,
-              month: 45,
+              Weekly: 10,
+              Monthly: 45,
             }
           ]
         },
@@ -98,8 +98,8 @@ export class BudgetPageComponent implements OnInit {
           name: "T-Mobile",
           amount: [
             {
-              week: 36,
-              month: 156,
+              Weekly: 36,
+              Monthly: 156,
             }
           ]
         },
@@ -107,8 +107,8 @@ export class BudgetPageComponent implements OnInit {
           name: "Storage Unit",
           amount: [
             {
-              week: 4,
-              month: 19,
+              Weekly: 4,
+              Monthly: 19,
             }
           ]
         },
@@ -116,8 +116,8 @@ export class BudgetPageComponent implements OnInit {
           name: "Car Wash Club",
           amount: [
             {
-              week: 4,
-              month: 18,
+              Weekly: 4,
+              Monthly: 18,
             }
           ]
         },
@@ -125,8 +125,8 @@ export class BudgetPageComponent implements OnInit {
           name: "Groceries",
           amount: [
             {
-              week: 70,
-              month: 303,
+              Weekly: 70,
+              Monthly: 303,
             }
           ]
         },
@@ -134,8 +134,8 @@ export class BudgetPageComponent implements OnInit {
           name: "Dog Food",
           amount: [
             {
-              week: 16,
-              month: 70,
+              Weekly: 16,
+              Monthly: 70,
             }
           ]
         },
@@ -143,8 +143,8 @@ export class BudgetPageComponent implements OnInit {
           name: "Fuel",
           amount: [
             {
-              week: 58,
-              month: 250,
+              Weekly: 58,
+              Monthly: 250,
             }
           ]
         },
@@ -154,14 +154,14 @@ export class BudgetPageComponent implements OnInit {
       category: 'Savings',
       color: 'blue',
       open: false,
-      costBasis: 'week',
+      costBasis: 'Weekly',
       lineItems: [
         {
           name: "Vacation Fund",
           amount: [
             {
-              week: 23,
-              month: 100,
+              Weekly: 23,
+              Monthly: 100,
             }
           ]
         },
@@ -169,8 +169,8 @@ export class BudgetPageComponent implements OnInit {
           name: "Car Maintenance",
           amount: [
             {
-              week: 17,
-              month: 75,
+              Weekly: 17,
+              Monthly: 75,
             }
           ]
         },
@@ -178,8 +178,8 @@ export class BudgetPageComponent implements OnInit {
           name: "Gifts",
           amount: [
             {
-              week: 2,
-              month: 10,
+              Weekly: 2,
+              Monthly: 10,
             }
           ]
         },
@@ -187,8 +187,8 @@ export class BudgetPageComponent implements OnInit {
           name: "Irregular Expenses",
           amount: [
             {
-              week: 40,
-              month: 173,
+              Weekly: 40,
+              Monthly: 173,
             }
           ]
         },
@@ -196,8 +196,8 @@ export class BudgetPageComponent implements OnInit {
           name: "Emergency Savings",
           amount: [
             {
-              week: 475,
-              month: 2060,
+              Weekly: 475,
+              Monthly: 2060,
             }
           ]
         },
@@ -207,14 +207,14 @@ export class BudgetPageComponent implements OnInit {
       category: 'Spending',
       color: 'yellow',
       open: false,
-      costBasis: 'week',
+      costBasis: 'Weekly',
       lineItems: [
         {
           name: "Fun Money",
           amount: [
             {
-              week: 45,
-              month: 200,
+              Weekly: 45,
+              Monthly: 200,
             }
           ]
         }
@@ -239,14 +239,14 @@ export class BudgetPageComponent implements OnInit {
         category.open = false;
       }
     }
-    if ($event == "week") {
+    if ($event == "Weekly") {
       for (let category of this.budgetCategories) {
-        category.costBasis = "week"
+        category.costBasis = "Weekly"
       }
     }
-    if ($event == "month") {
+    if ($event == "Monthly") {
       for (let category of this.budgetCategories) {
-        category.costBasis = "month"
+        category.costBasis = "Monthly"
       }
     }
   }

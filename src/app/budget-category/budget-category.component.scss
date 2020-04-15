@@ -1,21 +1,10 @@
-.lineItem {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 80%;
-    padding: .5em 1em;
-    margin: 0 0 0 auto;
-    
-}
 
 
-.lineItem > mat-card-subtitle, .lineItem > mat-card-content{
-    margin-bottom: 0px;
-    font-size: medium;
-    font-weight: bold;
 
-}
 
+
+
+//budgetCategory Section
 .budgetCategory {
     margin: 1em auto;
 }
@@ -25,48 +14,115 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .budgetCategory > div > mat-card > mat-card-content {
-    font-size: x-large;
-    font-weight: bold;
+    font-size: xx-large;
+    font-weight: 100;
+    margin: 0;
+    text-align: right;
 }
 
+.budgetCategory > div > mat-card > mat-card-content > div:last-of-type {
+    font-size: small;
+    font-weight: normal;
+    //font-style: italic;
+    margin: 0;
+}
+
+mat-card-title {
+    margin-bottom: 0.75em;
+    font-weight: 100;
+    font-size: xx-large;
+}
+
+// dropDown Section
+.dropDown {
+    display: flex;
+    flex-direction: column !important;
+    justify-content: space-between;
+    width: 80%;
+    padding: 1em 1em .25em 1em;
+    margin: -1em auto 0 auto;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    z-index: -1;
+}
+
+// lineItem Section
+.lineItem {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.5em 0em;
+}
+
+.lineItem > mat-card-content{
+    margin-bottom: 0px;
+    font-size: medium;
+    font-weight: normal;
+}
+
+// All colors
+.green > div > mat-card > .lineItem:last-of-type, 
+.red > div > mat-card > .lineItem:last-of-type,
+.blue > div > mat-card > .lineItem:last-of-type,
+.yellow > div > mat-card > .lineItem:last-of-type {
+    border-width: 0;
+}
+
+.green > mat-card,
+.green > div > mat-card, 
+.red > mat-card,
+.red > div > mat-card, 
+.blue > mat-card,
+.blue > div > mat-card, 
+.yellow > mat-card,
+.yellow > div > mat-card {
+    color: white;
+}
+
+div > mat-card > .lineItem {
+    border-style: solid;
+    border-width: 0em 0em 0.1em 0em;
+    border-color: rgba(255, 255, 255, 0.30);
+}
+
+//green
 .green > mat-card {
-    background-color: rgb(86, 214, 86);
+    background: linear-gradient(to bottom right,rgb(93, 243, 93),rgb(16, 207, 16));
 }
 
-.green > .lineItem {
-    background-color: rgb(143, 245, 143);
-    border-style: solid;
-    border-color: rgb(86, 214, 86);
+.green > div > mat-card {
+    background: linear-gradient(to top,rgb(16, 207, 16), 30% ,rgb(104, 241, 104));
 }
 
+//red
 .red > mat-card { 
-    background-color: rgb(233, 58, 58);
+    background: linear-gradient(to bottom right,rgb(250, 108, 108),rgb(250, 11, 11));
 }
 
-.red > .lineItem {
-    background-color: rgb(255, 132, 132);
-    border-style: solid;
-    border-color: rgb(233, 58, 58);
+.red > div > mat-card {
+    background: linear-gradient(to top,rgb(250, 37, 37), 30% ,rgb(253, 135, 135));
 }
 
+//blue
 .blue > mat-card {
-    background-color: rgb(45, 74, 238);
+    background: linear-gradient(to bottom right,rgb(76, 133, 255),rgb(4, 8, 243));
 }
 
-.blue > .lineItem {
-    background-color: rgb(56, 125, 255);
-    border-style: solid;
-    border-color: rgb(45, 74, 238);
+.blue > div > mat-card {
+    background: linear-gradient(to top,rgb(4, 8, 243), 30% ,rgb(76, 133, 255));
 }
 
+//yellow
 .yellow > mat-card {
-    background-color: rgb(255, 255, 89);
+    background: linear-gradient(to bottom right,rgb(255, 171, 93),rgb(255, 136, 0));
+    color: white;
 }
 
-.yellow > .lineItem {
-    background-color: rgb(255, 255, 144);;
+.yellow > div > mat-card {
+    background: linear-gradient(to top,rgb(255, 136, 0), 30% ,rgb(255, 171, 93));
 }
