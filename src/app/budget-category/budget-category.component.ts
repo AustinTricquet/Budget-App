@@ -14,35 +14,62 @@ export class BudgetCategoryComponent implements OnInit {
   ngOnInit() {
   }
 
-  
-
   sum(category) {
     if (category.costBasis == "Weekly") {
       let sum = 0;
-      (category.lineItems).forEach(item => {
-        sum += item.amount[0].Weekly
+      (category.children).forEach(child => {
+        try {
+          sum += child.amount[0].Weekly
+        } catch {
+          (child.children).forEach(child => {
+            sum += child.amount[0].Weekly
+          });
+        }
       });
       return sum
     }
     if (category.costBasis == "Monthly") {
       let sum = 0;
-      (category.lineItems).forEach(item => {
-        sum += item.amount[0].Monthly
+      (category.children).forEach(child => {
+        try {
+          sum += child.amount[0].Monthly
+        } catch {
+          (child.children).forEach(child => {
+            sum += child.amount[0].Monthly
+          });
+        }
+        
       });
       return sum
     }
   }
 
-  getAmount(category, lineItem) {
+  getAmount(category, child) {
     if (category.costBasis == "Weekly") {
-      return lineItem.amount[0].Weekly
+      try { 
+        return child.amount[0].Weekly
+      } catch {
+        let sum = 0;
+        (child.children).forEach(child => {
+          sum += child.amount[0].Weekly
+        });
+        return sum
+      }
     }
     if (category.costBasis == "Monthly") {
-      return lineItem.amount[0].Monthly
+      try {
+        return child.amount[0].Monthly
+      } catch {
+        let sum = 0;
+        (child.children).forEach(child => {
+          sum += child.amount[0].Monthly
+        });
+        return sum
+      }
     }
-    
   }
 
-  
-
+  myclick():any {
+    console.log("clicked!!");
+  }
 }

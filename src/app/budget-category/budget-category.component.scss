@@ -40,45 +40,90 @@ mat-card-title {
     margin: -1em auto 0 auto;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    z-index: -1;
+    //z-index: -1;
 }
 
-// lineItem Section
-.lineItem {
+.childDropDown {
     display: flex;
-    flex-direction: row !important;
+    flex-direction: column !important;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto
+}
+
+
+// lineItem Section
+//.lineItem {}
+    ////display: flex;
+    //flex-direction: row !important;
+    //justify-content: space-between;
+    //align-items: center;
+    //width: 100%;
+    //padding: 0em 0em;
+//}
+.category {
+    z-index: +1;
+}
+
+.children {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0.5em 0em;
+}
+
+.children > div > mat-card-content > div {
+    text-align: end;
+}
+
+.children > div > mat-card-content > div:last-of-type {
+    font-size: small;
+    font-weight: 100;
+    margin: 0;
+    font-style: italic;
+}
+
+.children > div > mat-card-content{
+    margin-bottom: 0px;
+    font-size: 1.4em;
+    font-weight: 100;
+}
+
+.children > div {
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     padding: 0.5em 0em;
 }
 
-.lineItem > mat-card-content{
+.grandchildren{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.5em 0em;
+}
+
+.grandchildren > mat-card-content {
     margin-bottom: 0px;
-    font-size: medium;
-    font-weight: normal;
+    font-size: 1.1em;
+    font-weight: 100;
 }
 
 // All colors
-.green > div > mat-card > .lineItem:last-of-type, 
-.red > div > mat-card > .lineItem:last-of-type,
-.blue > div > mat-card > .lineItem:last-of-type,
-.yellow > div > mat-card > .lineItem:last-of-type {
+.children:last-of-type, .childDropDown > .grandchildren:last-of-type {
     border-width: 0;
 }
 
-.green > mat-card,
-.green > div > mat-card, 
-.red > mat-card,
-.red > div > mat-card, 
-.blue > mat-card,
-.blue > div > mat-card, 
-.yellow > mat-card,
-.yellow > div > mat-card {
+div > div > mat-card, div > div > div > mat-card {
     color: white;
 }
 
-div > mat-card > .lineItem {
+ .children, .grandchildren {
     border-style: solid;
     border-width: 0em 0em 0.1em 0em;
     border-color: rgba(255, 255, 255, 0.30);
@@ -121,7 +166,7 @@ div > mat-card > .lineItem {
     background: linear-gradient(to bottom right,rgb(253, 194, 160),rgb(253, 180, 139));
 }
 
-.green > div > mat-card {
+.green > div > mat-card, .green > div > mat-card > div > div > .childDropDown  {
     background: linear-gradient(to top,rgb(253, 180, 139), 30% ,rgb(253, 194, 160));
 }
 
@@ -130,7 +175,7 @@ div > mat-card > .lineItem {
     background: linear-gradient(to bottom right,rgb(250, 142, 140),rgb(250, 126, 124));
 }
 
-.red > div > mat-card {
+.red > div > mat-card, .red > div > mat-card > div > div > .childDropDown {
     background: linear-gradient(to top,rgb(250, 126, 124), 30% ,rgb(250, 142, 140));
 }
 
@@ -139,7 +184,7 @@ div > mat-card > .lineItem {
     background: linear-gradient(to bottom right,rgb(127, 114, 145),rgb(109, 95, 128));
 }
 
-.blue > div > mat-card {
+.blue > div > mat-card, .blue > div > mat-card > div > div > .childDropDown  {
     background: linear-gradient(to top,rgb(109, 95, 128), 30% ,rgb(127, 114, 145));
 }
 
@@ -148,6 +193,6 @@ div > mat-card > .lineItem {
     background: linear-gradient(to bottom right,rgb(62, 103, 139),rgb(46, 90, 129));
 }
 
-.yellow > div > mat-card {
+.yellow > div > mat-card, .yellow > div > mat-card > div > div > .childDropDown  {
     background: linear-gradient(to top,rgb(46, 90, 129), 30% ,rgb(62, 103, 139));
 }

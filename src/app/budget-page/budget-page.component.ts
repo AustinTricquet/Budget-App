@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TimeoutError } from 'rxjs';
 
 @Component({
   selector: 'app-budget-page',
@@ -13,9 +14,11 @@ export class BudgetPageComponent implements OnInit {
       color: 'green',
       open: false,
       costBasis: 'Weekly',
-      lineItems: [
+      children: [
         {
           name: "Austin's Income",
+          open: true,
+          children: [],
           amount: [
             {
               Weekly: 926,
@@ -25,6 +28,8 @@ export class BudgetPageComponent implements OnInit {
         },
         {
           name: "Courtney's Income",
+          open: true,
+          children: [],
           amount: [
             {
               Weekly: 606,
@@ -37,116 +42,181 @@ export class BudgetPageComponent implements OnInit {
     {
       category: 'Expenses',
       color: 'red',
-      open: false,
+      open: true,
       costBasis: 'Weekly',
-      lineItems: [
+      children: [
         {
           name: "Church Tithes",
+          open: true,
+          children: [],
           amount: [
             {
               Weekly: 202,
               Monthly: 875,
             }
-          ]
+          ],
+          due: "8th",
         },
         {
           name: "Rent",
+          open: true,
+          children: [],
           amount: [
             {
               Weekly: 248,
               Monthly: 1074,
             }
-          ]
+          ],
+          due: "2nd",
         },
         {
           name: "Electric Bill",
+          open: true,
+          children: [],
           amount: [
             {
               Weekly: 12,
               Monthly: 50,
             }
-          ]
+          ],
+          due: "25th",
         },
         {
           name: "Student Debt",
+          open: true,
+          children: [],
           amount: [
             {
               Weekly: 211,
               Monthly: 915,
             }
-          ]
+          ],
+          due: "17th",
         },
         {
           name: "Car Loan",
+          open: true,
+          children: [],
           amount: [
             {
               Weekly: 58,
               Monthly: 251,
             }
-          ]
+          ],
+          due: "24th",
         },
         {
           name: "Internet",
+          open: true,
+          children: [],
           amount: [
             {
               Weekly: 10,
               Monthly: 45,
             }
-          ]
+          ],
+          due: "26th",
         },
         {
           name: "T-Mobile",
+          open: true,
+          children: [],
           amount: [
             {
               Weekly: 36,
               Monthly: 156,
             }
-          ]
+          ],
+          due: "26th",
         },
         {
           name: "Storage Unit",
+          open: true,
+          children: [],
           amount: [
             {
               Weekly: 4,
               Monthly: 19,
             }
-          ]
+          ],
+          due: "3rd",
         },
         {
           name: "Car Wash Club",
+          open: true,
+          children: [],
           amount: [
             {
               Weekly: 4,
               Monthly: 18,
             }
-          ]
+          ],
+          due: "13th",
+        },
+        {
+          name: "Irregular Expenses",
+          open: false,
+          children: [
+            {
+              name: "Amazon",
+              open: true,
+              children: [],
+              amount: [
+                {
+                  Weekly: 70,
+                  Monthly: 303,
+                }
+              ],
+              due: "19"
+            },
+            {
+              name: "Geico",
+              open: true,
+              amount: [
+                {
+                  Weekly: 70,
+                  Monthly: 303,
+                }
+              ],
+              due: "30"
+            }
+          ],
         },
         {
           name: "Groceries",
+          open: true,
+          children: [],
           amount: [
             {
               Weekly: 70,
               Monthly: 303,
             }
-          ]
+          ],
+          due: "19th",
         },
         {
           name: "Dog Food",
+          open: true,
+          children: [],
           amount: [
             {
               Weekly: 16,
               Monthly: 70,
             }
-          ]
+          ],
+          due: "1st",
         },
         {
           name: "Fuel",
+          open: true,
+          children: [],
           amount: [
             {
               Weekly: 58,
               Monthly: 250,
             }
-          ]
+          ],
+          due: "10th",
         },
       ],
     },
@@ -155,9 +225,11 @@ export class BudgetPageComponent implements OnInit {
       color: 'blue',
       open: false,
       costBasis: 'Weekly',
-      lineItems: [
+      children: [
         {
           name: "Vacation Fund",
+          open: true,
+          children: [],
           amount: [
             {
               Weekly: 23,
@@ -167,6 +239,8 @@ export class BudgetPageComponent implements OnInit {
         },
         {
           name: "Car Maintenance",
+          open: true,
+          children: [],
           amount: [
             {
               Weekly: 17,
@@ -176,6 +250,8 @@ export class BudgetPageComponent implements OnInit {
         },
         {
           name: "Gifts",
+          open: true,
+          children: [],
           amount: [
             {
               Weekly: 2,
@@ -185,6 +261,8 @@ export class BudgetPageComponent implements OnInit {
         },
         {
           name: "Irregular Expenses",
+          open: true,
+          children: [],
           amount: [
             {
               Weekly: 40,
@@ -194,6 +272,8 @@ export class BudgetPageComponent implements OnInit {
         },
         {
           name: "Emergency Savings",
+          open: true,
+          children: [],
           amount: [
             {
               Weekly: 475,
@@ -208,9 +288,11 @@ export class BudgetPageComponent implements OnInit {
       color: 'yellow',
       open: false,
       costBasis: 'Weekly',
-      lineItems: [
+      children: [
         {
           name: "Fun Money",
+          open: true,
+          children: [],
           amount: [
             {
               Weekly: 45,

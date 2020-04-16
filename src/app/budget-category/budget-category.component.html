@@ -1,6 +1,6 @@
 <div *ngFor="let category of budgetCategories" class="budgetCategory">
     <div class="{{category.color}}">
-        <mat-card (click)="category.open = !category.open">
+        <mat-card (click)="category.open = !category.open" class="category">
             <mat-card-title>{{category.category}}</mat-card-title>
             <mat-card-content>
                 <div>${{([sum(category)])}}</div>
@@ -9,9 +9,25 @@
         </mat-card>
         <div *ngIf="category.open">
             <mat-card class="dropDown">
-                <div *ngFor="let lineItem of category.lineItems" class="lineItem">
-                    <mat-card-content>{{lineItem.name}}</mat-card-content>
-                    <mat-card-content>${{([getAmount(category,lineItem)])}}</mat-card-content>
+                <div *ngFor="let child of category.children" class="children">
+                    <div (click)="child.open = !child.open">
+                        <mat-card-content>{{child.name}}</mat-card-content>
+                        <mat-card-content>
+                            <div>${{([getAmount(category,child)])}}</div>
+                            <div></div>
+                        </mat-card-content>
+                    </div> 
+                    <div *ngIf="(child.children != '')&&(child.open)">
+                        <mat-card class="childDropDown">
+                            <div *ngFor="let child of child.children" class="grandchildren">
+                                <mat-card-content>{{child.name}}</mat-card-content>
+                                <mat-card-content>
+                                    <div>${{([getAmount(category,child)])}}</div>
+                                    <div></div>
+                                </mat-card-content>
+                            </div>
+                        </mat-card>
+                    </div>
                 </div>
             </mat-card>
         </div>
