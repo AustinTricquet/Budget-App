@@ -42,7 +42,7 @@ export class BudgetPageComponent implements OnInit {
     {
       category: 'Expenses',
       color: 'red',
-      open: true,
+      open: false,
       costBasis: 'Weekly',
       children: [
         {

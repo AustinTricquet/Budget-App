@@ -1,0 +1,42 @@
+<mat-toolbar color="primary">
+    <mat-icon>attach_money</mat-icon>
+    <div>Budget App</div>
+    <mat-icon>settings</mat-icon>
+</mat-toolbar>
+
+<mat-tab-group mat-stretch-tabs backgroundColor="primary" headerPosition="below">
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <div>
+                <mat-icon>attach_money</mat-icon>
+                <div>Budget</div>
+            </div>
+            
+        </ng-template>
+        <app-budget-page></app-budget-page>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <div>
+                <mat-icon>event</mat-icon>
+                <div>Calendar</div>
+            </div>
+        </ng-template>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <div>
+                <mat-icon>stars</mat-icon>
+                <div>Goals</div>
+            </div>
+        </ng-template>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <div>
+                <mat-icon>account_balance</mat-icon>
+                <div>Accounts</div>
+            </div>
+        </ng-template>
+    </mat-tab>
+</mat-tab-group>

@@ -1,9 +1,11 @@
 <div class="mainContent">
-    <div class="toggles">
-        <app-week-month-toggle (selectedValueEvent2)="receiveSelectedValue($event)"></app-week-month-toggle>
-        <app-sum-detail-toggle (selectedValueEvent)="receiveSelectedValue($event)"></app-sum-detail-toggle>
+    <div>
+        <div class="toggles">
+            <app-week-month-toggle (selectedValueEvent2)="receiveSelectedValue($event)"></app-week-month-toggle>
+            <app-sum-detail-toggle (selectedValueEvent)="receiveSelectedValue($event)"></app-sum-detail-toggle>
+        </div>
+        <app-budget-category [budgetCategories]="budgetCategories"></app-budget-category>
     </div>
-    <app-budget-category [budgetCategories]="budgetCategories"></app-budget-category>
 </div>
 
 

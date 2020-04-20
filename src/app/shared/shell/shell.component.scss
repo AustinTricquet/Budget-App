@@ -1,0 +1,18 @@
+mat-tab-group  {
+    bottom: 0;
+    height: 94vh;
+}
+
+mat-toolbar {
+    height: 6vh !important;
+}
+
+mat-toolbar > div {
+    width: 100%;
+}
+
+.mat-tab-label {
+    font-size: small !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}

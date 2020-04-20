@@ -1,11 +1,15 @@
 @media only screen and (max-width: 1000px) {
     .mainContent {
-        width:90%;
-        margin: 5em auto;
-        
+        width:100%;
+        margin: 0em auto;
+        height: 88vh;
     }
 
-    .mainContent > .toggles {
+    .mainContent > div {
+        padding: 1em;
+    }
+
+    .mainContent > div > .toggles {
         display: flex;
         flex-direction: row;
         justify-content: space-between;

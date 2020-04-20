@@ -9,6 +9,8 @@
 // Be sure that you only ever include this mixin once!
 @include mat-core();
 
+
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
@@ -21,17 +23,32 @@ $Budget-App-warn: mat-palette($mat-red);
 // Create the theme object (a Sass map containing all of the palettes).
 $Budget-App-theme: mat-light-theme($Budget-App-primary, $Budget-App-accent, $Budget-App-warn);
 
+//theme
+$my-theme-primary: mat-palette($mat-blue-grey);
+$my-theme-accent: mat-palette($mat-pink);
+$my-theme-warn: mat-palette($mat-red);
+
+// create theme
+
+$my-theme: mat-light-theme(
+    $my-theme-primary,
+    $my-theme-accent,
+    $my-theme-warn
+);
+
+@include angular-material-theme($my-theme);
+
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include angular-material-theme($Budget-App-theme);
+//@include angular-material-theme($Budget-App-theme);
 
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-body {
+body { 
     background: linear-gradient(to bottom,rgba(253, 181, 139, 0.85),rgb(250, 126, 124, 0.85),rgb(109, 95, 128, 0.85),rgb(46, 90, 129, 0.85));
     background-repeat: no-repeat;
     background-attachment: fixed;

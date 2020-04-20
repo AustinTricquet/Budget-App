@@ -6,27 +6,21 @@ import { AppComponent } from './app.component';
 import { BudgetCategoryComponent } from './budget-category/budget-category.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatButtonModule, MatCardModule, MatButtonToggleModule } from '@angular/material';
 import { BudgetPageComponent } from './budget-page/budget-page.component';
 import { SumDetailToggleComponent } from './sum-detail-toggle/sum-detail-toggle.component';
 import { WeekMonthToggleComponent } from './week-month-toggle/week-month-toggle.component';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    BudgetCategoryComponent,
-    BudgetPageComponent,
-    SumDetailToggleComponent,
-    WeekMonthToggleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule,
-    MatCardModule,
-    MatButtonToggleModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
