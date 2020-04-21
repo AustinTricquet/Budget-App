@@ -9,6 +9,8 @@
 // Be sure that you only ever include this mixin once!
 @include mat-core();
 
+@import './custom-palettes.scss';
+
 
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
@@ -36,7 +38,7 @@ $my-theme: mat-light-theme(
     $my-theme-warn
 );
 
-@include angular-material-theme($my-theme);
+@include angular-material-theme($bv-theme);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
