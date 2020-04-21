@@ -1,7 +1,11 @@
 <mat-toolbar color="primary">
     <mat-icon>attach_money</mat-icon>
     <div>Budget App</div>
-    <mat-icon>settings</mat-icon>
+    <mat-menu #appMenu="matMenu">
+        <button mat-menu-item>Settings</button>
+        <button mat-menu-item>Edit</button>
+    </mat-menu>
+    <button mat-icon-button [matMenuTriggerFor]="appMenu"><mat-icon>settings</mat-icon></button>
 </mat-toolbar>
 
 <mat-tab-group mat-stretch-tabs backgroundColor="primary" headerPosition="below">
