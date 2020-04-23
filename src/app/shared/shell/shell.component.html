@@ -8,7 +8,7 @@
     <button mat-icon-button [matMenuTriggerFor]="appMenu"><mat-icon>settings</mat-icon></button>
 </mat-toolbar>
 
-<mat-tab-group mat-stretch-tabs backgroundColor="primary" headerPosition="below">
+<mat-tab-group (selectedTabChange)="tabChanged($event)" mat-stretch-tabs backgroundColor="primary" headerPosition="below">
     <mat-tab>
         <ng-template mat-tab-label>
             <div>
@@ -44,3 +44,6 @@
         </ng-template>
     </mat-tab>
 </mat-tab-group>
+<button mat-fab class="add"><mat-icon class="icon">{{fabIcon}}</mat-icon></button>
+
+

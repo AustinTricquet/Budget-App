@@ -16,3 +16,17 @@ mat-toolbar > div {
     margin: 0 !important;
     padding: 0 !important;
 }
+
+.add {
+    position: fixed !important;
+    z-index: 1;
+    right: 1.5em;
+    bottom: 4.6em;
+    background-color: rgb(253, 180, 139) !important;
+    color: rgb(46, 90, 129) !important;
+
+}
+
+.icon {
+    font-weight: bolder;
+}
