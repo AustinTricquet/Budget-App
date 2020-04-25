@@ -11,22 +11,52 @@ mat-toolbar > div {
     width: 100%;
 }
 
-.mat-tab-label {
+.tab {
     font-size: small !important;
     margin: 0 !important;
     padding: 0 !important;
 }
 
-.add {
-    position: fixed !important;
-    z-index: 1;
-    right: 1.5em;
-    bottom: 4.6em;
-    background-color: rgb(253, 180, 139) !important;
-    color: rgb(46, 90, 129) !important;
+.fab-container {
+    position: fixed;
+    bottom: 62px;
+    right: 15px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
 
+    > div {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-bottom: 5px;
+
+        button {
+            margin-bottom: 17px;
+            background-color: white !important;
+            color: rgb(46, 90, 129) !important
+        }
+    }
 }
 
-.icon {
-    font-weight: bolder;
+.fab-toggler {
+    float: right;
+    z-index: 100;
+    background-color: white !important;
+
+    mat-icon, i {
+        color: rgb(46, 90, 129) !important;
+        font-weight: bolder;
+    }
 }
+
+#fab-dismiss {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+}
+

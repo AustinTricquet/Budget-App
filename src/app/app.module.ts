@@ -10,7 +10,9 @@ import { BudgetPageComponent } from './budget-page/budget-page.component';
 import { SumDetailToggleComponent } from './sum-detail-toggle/sum-detail-toggle.component';
 import { WeekMonthToggleComponent } from './week-month-toggle/week-month-toggle.component';
 import { SharedModule } from './shared/shared.module';
+import { MatTooltipModule } from '@angular/material';
 
+import 'hammerjs';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    MatTooltipModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

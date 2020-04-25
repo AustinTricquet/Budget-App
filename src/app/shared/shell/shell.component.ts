@@ -3,19 +3,34 @@ import { BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 import { Observable, ArgumentOutOfRangeError } from 'rxjs';
 import { map, shareReplay} from 'rxjs/operators';
 import { MatTabChangeEvent } from '@angular/material';
+import { speedDialFabAnimations } from './speed-dial-fab.animations';
+import { MatTooltipModule } from '@angular/material';
 
 @Component({
   selector: 'app-shell',
   templateUrl: './shell.component.html',
   styleUrls: ['./shell.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  /*encapsulation: ViewEncapsulation.None,*/
+  animations: speedDialFabAnimations
 })
 export class ShellComponent {
 
   fabOptions = {
     budget: {
       color: "orange",
-      icon: "edit"
+      icon: "edit",
+      speedDial: [
+        {
+          icon: 'edit',
+          name: 'Edit'
+        },
+        {
+          icon: 'attach_money',
+          name: 'Budgets'
+        }
+      ],
+      buttons: [],
+      fabTogglerState: 'inactive'
     },
     calendar: {
       color: "red",
@@ -64,5 +79,18 @@ export class ShellComponent {
 
   }
   
+  showItems() {
+    this.fabOptions.budget.fabTogglerState = 'active';
+    this.fabOptions.budget.buttons = this.fabOptions.budget.speedDial;
+  }
+
+  hideItems() {
+    this.fabOptions.budget.fabTogglerState = 'inactive';
+    this.fabOptions.budget.buttons = [];
+  }
+
+  onToggleFab() {
+    this.fabOptions.budget.buttons.length ? this.hideItems() : this.showItems();
+  }
 
 }
