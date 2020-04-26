@@ -6,7 +6,8 @@ import {
     state,
     style,
     transition,
-    trigger
+    trigger,
+
   } from '@angular/animations';
   
   export const speedDialFabAnimations = [

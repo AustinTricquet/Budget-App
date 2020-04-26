@@ -5,16 +5,10 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { LayoutModule } from '@angular/cdk/layout';
 import { RouterModule } from '@angular/router';
 import { ShellComponent } from './shell/shell.component';
-import { BudgetPageComponent } from '../budget-page/budget-page.component';
-import { SumDetailToggleComponent } from '../sum-detail-toggle/sum-detail-toggle.component';
-import { WeekMonthToggleComponent } from '../week-month-toggle/week-month-toggle.component';
-import { BudgetCategoryComponent } from '../budget-category/budget-category.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import 'hammerjs';
 
 @NgModule({
-  declarations: [ShellComponent, BudgetPageComponent, SumDetailToggleComponent, WeekMonthToggleComponent, BudgetCategoryComponent],
+  declarations: [ShellComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -32,7 +26,6 @@ import 'hammerjs';
     MatButtonToggleModule,
     MatTabsModule,
     MatTooltipModule,
-    BrowserAnimationsModule,
   ],
   exports: [
     MatButtonModule,
@@ -48,9 +41,8 @@ import 'hammerjs';
     MatInputModule,
     MatSnackBarModule,
     MatButtonToggleModule,
-    ShellComponent,
     MatTooltipModule,
-    BrowserAnimationsModule
+    ShellComponent
   ]
 })
 export class SharedModule { }

@@ -1,0 +1,17 @@
+<div id="fab-dismiss"
+    *ngIf="fabOptions.budget.fabTogglerState==='active'"
+    (click)="onToggleFab()"></div>
+<div class="fab-container">
+    <button mat-fab color="primary" class="fab-toggler"
+            (click)="onToggleFab()">
+        <i class="material-icons" [@fabToggler]="{value: fabOptions.budget.fabTogglerState}">add</i> <!-- Animation here -->
+    </button>
+    <div [@speedDialStagger]="fabOptions.budget.buttons.length"> <!-- Animation here -->
+        <button *ngFor="let btn of fabOptions.budget.buttons"
+                mat-mini-fab
+                class="fab-secondary"
+                color="primary">
+            <mat-icon matTooltip="{{btn.name}}" matTooltipPosition="left">{{btn.icon}}</mat-icon>
+        </button>
+    </div>
+</div>

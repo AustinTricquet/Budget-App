@@ -1,0 +1,36 @@
+<mat-tab-group (selectedTabChange)="tabChanged($event)" mat-stretch-tabs backgroundColor="primary" headerPosition="below">
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <div class='tab'>
+                <mat-icon>attach_money</mat-icon>
+                <div>Budget</div>
+            </div>
+        </ng-template>
+        <app-budget-page></app-budget-page>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <div class='tab'>
+                <mat-icon>event</mat-icon>
+                <div>Calendar</div>
+            </div>
+        </ng-template>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <div class='tab'>
+                <mat-icon>stars</mat-icon>
+                <div>Goals</div>
+            </div>
+        </ng-template>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <div class='tab'>
+                <mat-icon>account_balance</mat-icon>
+                <div>Accounts</div>
+            </div>
+        </ng-template>
+    </mat-tab>
+</mat-tab-group>
+<app-fab></app-fab>

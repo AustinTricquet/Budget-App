@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { TimeoutError } from 'rxjs';
+import { Component, OnInit, Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-budget-page',
@@ -304,7 +304,6 @@ export class BudgetPageComponent implements OnInit {
     },
   ]
 
-
   constructor() { }
 
   ngOnInit() {
@@ -332,5 +331,4 @@ export class BudgetPageComponent implements OnInit {
       }
     }
   }
-
 }
