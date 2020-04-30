@@ -8,26 +8,30 @@ import { MatTabChangeEvent } from '@angular/material';
 })
 export class TabsComponent {
 
-  @Input() fabOptions;
-  @Input() fabColor;
-  @Input() fabIcon;
+  tab = "budget"
 
   tabChanged(tabChangeEvent: MatTabChangeEvent): void {
     console.log('tabChangeEvent => ', tabChangeEvent);
     console.log('index => ', tabChangeEvent.index);
 
     if(tabChangeEvent.index == 0) {
-      this.fabColor = this.fabOptions.budget.color;
-      this.fabIcon = this.fabOptions.budget.icon;
-    } else if (tabChangeEvent.index == 1) {
-      this.fabColor = this.fabOptions.calendar.color;
-      this.fabIcon = this.fabOptions.calendar.icon;
-    } else if (tabChangeEvent.index == 2) {
-      this.fabColor = this.fabOptions.goals.color;
-      this.fabIcon = this.fabOptions.goals.icon;
-    } else {
-      this.fabColor = this.fabOptions.accounts.color;
-      this.fabIcon = this.fabOptions.accounts.icon;
-    }
+        //this.fabColor = this.fabOptions.budget.color;
+        //this.fabIcon = this.fabOptions.budget.icon;
+        this.tab = "budget"
+      } else if (tabChangeEvent.index == 1) {
+        //this.fabColor = this.fabOptions.calendar.color;
+        //this.fabIcon = this.fabOptions.calendar.icon;
+        this.tab = "calendar"
+      } else if (tabChangeEvent.index == 2) {
+        //this.fabColor = this.fabOptions.goals.color;
+        //this.fabIcon = this.fabOptions.goals.icon;
+        this.tab = "goals"
+      } else {
+        //this.fabColor = this.fabOptions.accounts.color;
+        //this.fabIcon = this.fabOptions.accounts.icon;
+        this.tab = "accounts"
+      }
+
+    
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { speedDialFabAnimations } from './speed-dial-fab.animations';
 
 @Component({
@@ -7,65 +7,88 @@ import { speedDialFabAnimations } from './speed-dial-fab.animations';
   styleUrls: ['./fab.component.scss'],
   animations: speedDialFabAnimations,
 })
-export class FabComponent implements OnInit {
+export class FabComponent {
 
-  receiveSelectedTab($event) {
+  @Input() tab;
 
-  }
 
-  constructor() { }
 
-  ngOnInit() {
-  }
+
+
+  //receiveSelectedTab($event) {
+    //
+  //}
 
   fabOptions = {
     budget: {
       color: "orange",
-      icon: "edit",
+      icon: "add",
       speedDial: [
         {
           icon: 'edit',
-          name: 'Edit'
+          name: 'Edit',
         },
         {
           icon: 'attach_money',
-          name: 'Budgets'
+          name: 'Budgets',
         }
+      ],
+      buttons: [],
+      fabTogglerState: 'inactive',
+    },
+    calendar: {
+      color: "red",
+      icon: "add",
+      speedDial: [
+        {
+          icon: 'add',
+          name: 'Edit',
+        },
       ],
       buttons: [],
       fabTogglerState: 'inactive'
     },
-    calendar: {
-      color: "red",
-      icon: "add"
-    },
     goals: {
       color: "blue",
-      icon: "add"
+      icon: "add",
+      speedDial: [],
+      buttons: [],
+      fabTogglerState: 'inactive'
     },
     accounts: {
       color: "green",
-      icon: "add"
+      icon: "add",
+      speedDial: [],
+      buttons: [],
+      fabTogglerState: 'inactive'
     }
   }
 
   fabColor = this.fabOptions.budget.color;
   fabIcon = this.fabOptions.budget.icon;
 
-  showItems() {
-    this.fabOptions.budget.fabTogglerState = 'active';
-    this.fabOptions.budget.buttons = this.fabOptions.budget.speedDial;
+  showItems(tab) {
+    this.fabOptions[tab].fabTogglerState = 'active';
+    this.fabOptions[tab].buttons = this.fabOptions[tab].speedDial;
   }
 
-  hideItems() {
-    this.fabOptions.budget.fabTogglerState = 'inactive';
-    this.fabOptions.budget.buttons = [];
+  hideItems(tab) {
+    this.fabOptions[tab].fabTogglerState = 'inactive';
+    this.fabOptions[tab].buttons = [];
   }
 
-  onToggleFab() {
-    this.fabOptions.budget.buttons.length ? this.hideItems() : this.showItems();
+  onToggleFab(tab) {
+    console.log(tab);
+    console.log(this.fabOptions[tab]);
+    this.fabOptions[tab].buttons.length ? this.hideItems(this.tab) : this.showItems(this.tab);
   }
 
+  speedDial(button) {
+    console.log(button);
+    if(button === "Edit") {
+
+    }
+  }
 
   
 

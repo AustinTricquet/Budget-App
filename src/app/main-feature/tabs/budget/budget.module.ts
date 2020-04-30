@@ -5,10 +5,11 @@ import { SumDetailToggleComponent } from './budget-page/sum-detail-toggle/sum-de
 import { WeekMonthToggleComponent } from './budget-page/week-month-toggle/week-month-toggle.component';
 import { BudgetCategoryComponent } from './budget-page/budget-category/budget-category.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { EditRemainderComponent } from './budget-page/edit-remainder/edit-remainder.component';
 
 
 @NgModule({
-  declarations: [ BudgetPageComponent, SumDetailToggleComponent, WeekMonthToggleComponent, BudgetCategoryComponent],
+  declarations: [ BudgetPageComponent, SumDetailToggleComponent, WeekMonthToggleComponent, BudgetCategoryComponent, EditRemainderComponent],
   imports: [
     CommonModule,
     SharedModule,
