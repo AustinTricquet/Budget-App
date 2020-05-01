@@ -1,10 +1,10 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 
 @Component({
   selector: 'app-budget-page',
   templateUrl: './budget-page.component.html',
-  styleUrls: ['./budget-page.component.scss']
+  styleUrls: ['./budget-page.component.scss'],
 })
 export class BudgetPageComponent implements OnInit {
 

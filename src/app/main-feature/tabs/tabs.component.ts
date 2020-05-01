@@ -1,10 +1,11 @@
-import { Component, Input} from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { MatTabChangeEvent } from '@angular/material';
 
 @Component({
   selector: 'app-tabs',
   templateUrl: './tabs.component.html',
-  styleUrls: ['./tabs.component.scss']
+  styleUrls: ['./tabs.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class TabsComponent {
 

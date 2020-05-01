@@ -3,6 +3,10 @@
     margin: 1em auto;
 }
 
+.budgetCategory:first-of-type {
+    margin-top: 0em !important;
+}
+
 .budgetCategory > div > mat-card{
     display: flex;
     flex-direction: row;

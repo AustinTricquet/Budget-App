@@ -51,14 +51,14 @@ export class FabComponent {
     goals: {
       color: "blue",
       icon: "add",
-      speedDial: [],
+      speedDial: [{}],
       buttons: [],
       fabTogglerState: 'inactive'
     },
     accounts: {
       color: "green",
       icon: "add",
-      speedDial: [],
+      speedDial: [{}],
       buttons: [],
       fabTogglerState: 'inactive'
     }
