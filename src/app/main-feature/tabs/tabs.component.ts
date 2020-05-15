@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { MatTabChangeEvent } from '@angular/material';
+import { MatTabChangeEvent } from '@angular/material/tabs';
 
 @Component({
   selector: 'app-tabs',
