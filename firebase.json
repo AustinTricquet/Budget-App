@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "Budget-App",
+      "public": "dist/Budget-App",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "budgetapp-88e7e": {
+      "hosting": {
+        "Budget-App": [
+          "budgetapp-88e7e"
+        ]
+      }
+    }
+  }
+}
