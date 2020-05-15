@@ -6,10 +6,6 @@
         //padding: 1em;
     }
 
-    .mainContent > div {
-        //padding: 1em;
-    }
-
     .header {
         //position: fixed;
         z-index: 10;
@@ -25,9 +21,11 @@
         padding-right: 1em;
 
         //border: 1px solid #202020;
-        box-shadow: 0px 1px 3px rgba(41, 41, 41, 0.75);
-    
         
+    }
+
+    .shadow {
+        box-shadow: 0px 2px 5px rgba(41, 41, 41, 0.75);
     }
 
     .toggles {
@@ -35,12 +33,8 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        
         //width: 100vw;
     }
-
-    
-        
 }
 
 h2 {

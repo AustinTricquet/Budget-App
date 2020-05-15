@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, HostListener } from '@angular/core';
 
 
 @Component({
@@ -304,10 +304,23 @@ export class BudgetPageComponent implements OnInit {
     },
   ]
 
+  scrollclass = "header"
+
   constructor() { }
 
   ngOnInit() {
   }
+
+  @HostListener('window:scroll', ['$event'])
+    scrollHandler(event) {
+      let pos = document.getElementById("budgetBody").scrollTop;
+      this.scrollclass = "header shadow"
+
+      if (pos == 0) {
+        this.scrollclass = "header"
+      }
+      
+    }
 
   receiveSelectedValue($event) {
     if ($event == "Detail") {
