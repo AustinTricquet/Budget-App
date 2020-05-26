@@ -1,0 +1,24 @@
+mat-toolbar {
+    height: 6vh !important;
+}
+
+mat-toolbar > div {
+    width: 100%;
+}
+
+button {
+    float: right;
+}
+
+mat-sidenav {
+    width: 15em;
+}
+
+#loginPageContent {
+    margin: 1em;
+}
+
+.mat-drawer-container {
+    background-color: inherit !important;
+    position: inherit;
+}
