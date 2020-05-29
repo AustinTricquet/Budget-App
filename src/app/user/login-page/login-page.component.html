@@ -22,7 +22,7 @@
   
     <!-- TOP TOOLBAR-->
       <mat-toolbar>
-        <span class="logo" routerLink="/">Hunny</span>
+        <img id="toolbarLogo" routerLink="/" src="./assets/hunnyLogo.png">
         <span class="fill-space"></span>
         <div>
           <button 
@@ -36,24 +36,34 @@
         </div>
       </mat-toolbar>
   
-      <div id="loginPageContent">
-        <mat-card id="loginCard">
-          <h1>Login</h1>
-          <div *ngIf="!(afAuth.authState | async)">    
+      <div class="box">
+        <div id="loginPageContent" class="row content">
+        
+          <div *ngIf="!(afAuth.authState | async)"> 
+            <h1>Login</h1>   
+
             <button class="googleSignin" mat-raised-button appGoogleSignin>
               <img src="./assets/google-logo.png" />
             </button>
-            <p>Don't have an account?</p>
-            <p>Sign Up</p>
+
+            <h5>OR</h5>
+
+            <app-email-login></app-email-login>
+
           </div>
+
           <div *ngIf="afAuth.authState | async as user" class="logout">
             <p>
               Logged in as <strong>{{ user.email }}</strong>
             </p>
+
             <button mat-stroked-button (click)="afAuth.auth.signOut()">Logout</button>
           </div>
-        </mat-card>
-      </div>   
+      
+        </div>   
+
+      </div>
+      
   
     </mat-sidenav-content>
   </mat-sidenav-container>

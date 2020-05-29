@@ -14,7 +14,7 @@
     </mat-toolbar>
     <mat-nav-list>
       <a mat-list-item routerLink="/" (click)="sidenav.close()">Home</a>
-      <a mat-list-item (click)="onClick('homeAbout')">About</a>
+      <a mat-list-item routerLink="/" (click)="sidenav.close()">About</a>
       <a mat-list-item routerLink="/" (click)="sidenav.close()">Pricing</a>
       <a mat-list-item routerLink="/login" (click)="sidenav.close()">Login</a>
     </mat-nav-list>
@@ -23,7 +23,7 @@
 
   <!-- TOP TOOLBAR-->
     <mat-toolbar>
-      <img id="toolbarLogo" routerLink="/login" src="./assets/hunnyLogo.png">
+      <img id="toolbarLogo" routerLink="/" src="./assets/hunnyLogo.png">
       <span class="fill-space"></span>
       <div>
         <button 
@@ -41,7 +41,7 @@
         <div id="homeTop">
             <img id="bannerLogo" src="./assets/hunny-color-banner.JPG">
             <div>
-              <button mat-raised-button >Sign up</button>
+              <button mat-raised-button routerLink="login">Sign up</button>
               <button mat-raised-button >Learn More</button>
             </div>
         </div>

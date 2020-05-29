@@ -14,12 +14,22 @@ mat-sidenav {
     width: 15em;
 }
 
+mat-sidenav-container {
+    height: 100%;
+}
+
 #loginPageContent {
     margin: 1em;
+    text-align: center;
+    margin-top: 3em;
+
+    button {
+        float: center !important;
+    }
 }
 
 .mat-drawer-container {
-    background-color: inherit !important;
+    background-color: #feb900 !important;
     position: inherit;
 }
 
@@ -27,12 +37,6 @@ mat-sidenav {
     padding: 0;
 }
 
-#loginCard {
-    text-align: center;
-    margin-top: 5em;
-
-    button {
-        float: center !important;
-        
-    }
+#toolbarLogo {
+    max-height: 4vh;
 }
