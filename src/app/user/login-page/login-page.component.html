@@ -6,7 +6,7 @@
       <mat-toolbar>Menu
           <a mat-button style="height: 0; position: absolute;"></a>
           <div>
-              <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="sidenav.toggle()">
+              <button type="button" aria-label="Toggle sidenav" mat-icon-button class="menuBtn" (click)="sidenav.toggle()">
                   <mat-icon aria-label="Side nav toggle icon">close</mat-icon>
               </button>
           </div>
@@ -29,6 +29,7 @@
           type="button"
           aria-label="Toggle sidenav"
           mat-icon-button
+          class="menuBtn"
           (click)="sidenav.toggle()">
           <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
         </button>
@@ -36,30 +37,22 @@
       </mat-toolbar>
   
       <div id="loginPageContent">
-          <div>
-              <h3>Hunny Logo Medium</h3>
-              <h3>Login</h3>
-              
-              <div *ngIf="!(afAuth.authState | async)">
-                <h1>Login</h1>
-            
-                <button mat-raised-button appGoogleSignin>
-                  <img src="./assets/google-logo.png" />
-                </button>
-              </div>
-            
-              <div *ngIf="afAuth.authState | async as user" class="logout">
-                <p>
-                  Logged in as <strong>{{ user.email }}</strong>
-                </p>
-            
-                <button mat-stroked-button (click)="afAuth.auth.signOut()">Logout</button>
-              </div>
-
-
-              <p>Don't have an account?</p>
-              <p>Sign Up</p>
+        <mat-card id="loginCard">
+          <h1>Login</h1>
+          <div *ngIf="!(afAuth.authState | async)">    
+            <button class="googleSignin" mat-raised-button appGoogleSignin>
+              <img src="./assets/google-logo.png" />
+            </button>
+            <p>Don't have an account?</p>
+            <p>Sign Up</p>
           </div>
+          <div *ngIf="afAuth.authState | async as user" class="logout">
+            <p>
+              Logged in as <strong>{{ user.email }}</strong>
+            </p>
+            <button mat-stroked-button (click)="afAuth.auth.signOut()">Logout</button>
+          </div>
+        </mat-card>
       </div>   
   
     </mat-sidenav-content>

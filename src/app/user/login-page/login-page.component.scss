@@ -6,7 +6,7 @@ mat-toolbar > div {
     width: 100%;
 }
 
-button {
+.menuBtn {
     float: right;
 }
 
@@ -21,4 +21,18 @@ mat-sidenav {
 .mat-drawer-container {
     background-color: inherit !important;
     position: inherit;
+}
+
+.googleSignin {
+    padding: 0;
+}
+
+#loginCard {
+    text-align: center;
+    margin-top: 5em;
+
+    button {
+        float: center !important;
+        
+    }
 }

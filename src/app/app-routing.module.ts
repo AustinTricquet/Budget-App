@@ -13,7 +13,12 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { initialNavigation: 'enabled'}),
+  imports: [RouterModule.forRoot(routes, { initialNavigation: 'enabled',
+                                            anchorScrolling: 'enabled',
+                                            onSameUrlNavigation: 'reload',
+                                            scrollPositionRestoration: 'enabled',
+                                            scrollOffset: [0, 64],
+                                          }),
       MainFeatureModule,
 ],
   exports: [RouterModule]

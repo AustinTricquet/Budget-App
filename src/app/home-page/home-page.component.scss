@@ -1,5 +1,8 @@
 mat-toolbar {
     height: 6vh !important;
+    padding-left: 1em;
+    padding-right: 0.5em;
+    //width: 100%;
 }
 
 mat-toolbar > div {
@@ -14,12 +17,93 @@ mat-sidenav {
     width: 15em;
 }
 
-#homepageContent {
-    margin: 1em;
-}
 
 .mat-drawer-container {
     background-color: inherit !important;
     position: inherit;
 }
+
+mat-sidenav-content {
+    background: #ffb100;
+    //background: #ffffff;
+    height: 100vh;
+    //border: none;
+}
+
+#homeTop {
+    display: inline-block;
+    width: 100%;
+    margin: 0 !important;
+    //background: #ffb100;
+    padding-bottom: 2em;
+
+    div {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    button {
+        width: 8em;
+    }
+}
+
+#bannerLogo {
+    max-width: 100vw;
+    margin-top: 2em;
+}
+
+#toolbarLogo {
+    max-height: 4vh;
+}
+
+ul {
+    padding-inline-start: 20px
+}
+
+li {
+    padding: 0.5em 0em;
+    font-size: large;
+}
+
+#homeFeat > mat-card {
+    margin-bottom: 1em;
+}
+
+#homeFeat1 {
+    
+    //padding: 0;
+
+    mat-card-title {
+        //background-color: rgb(81, 219, 81);
+    }
+}
+
+#homeFeat2 {
+    //background-color: rgb(255, 86, 86);
+}
+
+
+#homeFeat3 {
+    //background-color: rgb(101, 129, 255);
+}
+
+
+#homeFeat4 {
+    //background-color: rgb(245, 91, 245);
+}
+
+#homeFeat,  #homePrice, #homeAbout {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+#homePrice > mat-card {
+    margin-bottom: 1em;
+}
+
+#homeAbout {
+    margin-bottom: 2em;
+}
+
 
