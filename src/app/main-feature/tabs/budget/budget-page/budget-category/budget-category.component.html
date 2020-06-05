@@ -11,12 +11,16 @@
             <mat-card class="dropDown">
                 <div *ngFor="let child of category.children" class="children">
                     <div (click)="child.open = !child.open">
-                        <mat-card-content>{{child.name}}</mat-card-content>
                         <mat-card-content>
-                            <div>${{([getAmount(category,child)])}}</div>
+                            <app-inline-edit [(ngModel)]="child.name" [required]="true" type="text"></app-inline-edit>
+                        </mat-card-content>
+                        <mat-card-content>
+                            <div>
+                                <app-inline-edit [(ngModel)]="child.amount[0][category.costBasis]" [required]="true" type="text"></app-inline-edit>
+                            </div>
                             <div></div>
                         </mat-card-content>
-                    </div> 
+                    </div>
                     <div *ngIf="(child.children != '')&&(child.open)">
                         <mat-card class="childDropDown">
                             <div *ngFor="let child of child.children" class="grandchildren">

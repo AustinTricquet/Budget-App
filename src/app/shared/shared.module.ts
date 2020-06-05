@@ -16,10 +16,12 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { LayoutModule } from '@angular/cdk/layout';
 import { RouterModule } from '@angular/router';
 import { ShellComponent } from './shell/shell.component';
+import { InlineEditComponent } from './inline-edit/inline-edit.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [ShellComponent],
+  declarations: [ShellComponent, InlineEditComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -37,6 +39,7 @@ import { ShellComponent } from './shell/shell.component';
     MatButtonToggleModule,
     MatTabsModule,
     MatTooltipModule,
+    FormsModule
   ],
   exports: [
     MatButtonModule,
@@ -53,7 +56,9 @@ import { ShellComponent } from './shell/shell.component';
     MatSnackBarModule,
     MatButtonToggleModule,
     MatTooltipModule,
-    ShellComponent
+    ShellComponent,
+    InlineEditComponent,
+    FormsModule
   ]
 })
 export class SharedModule { }
