@@ -19,12 +19,12 @@ mat-sidenav {
 
 
 .mat-drawer-container {
-    background-color: inherit !important;
+    background-color: transparent !important;
     position: inherit;
 }
 
 mat-sidenav-content {
-    background: #ffb100;
+    //background: #ffb100;
     //background: #ffffff;
     height: 100vh;
     //border: none;
